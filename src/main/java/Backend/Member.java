@@ -1,3 +1,5 @@
+package Backend;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,10 +10,17 @@ import java.util.InputMismatchException;
 public class Member extends Pelanggan {
     // Diskon diskon = new Diskon();
     public String ID;
+    public String tanggalMember;
+    
 
     public Member(String ID, String namaAwal, String tanggalMember, int saldo) { //TODO tanggalmember
         super(namaAwal,saldo);
         this.ID = ID;
+        this.tanggalMember = tanggalMember;
+    }
+    
+    public String getJoinDate(){
+        return tanggalMember;
     }
 
     public void showMemberAge() {

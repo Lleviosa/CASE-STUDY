@@ -1,3 +1,5 @@
+package Backend;
+
 public abstract class Promosi implements Applicable, Comparable<Integer> {
     protected String kodePromo;
     protected double persenPotongan;

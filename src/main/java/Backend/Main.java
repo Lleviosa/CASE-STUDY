@@ -1,3 +1,5 @@
+package Backend;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,17 +8,16 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
 import java.util.*;
-
 import javax.xml.catalog.CatalogException;
 
 public class Main {
-    static Map<String, Pelanggan> userMap = new HashMap<>();
-    static Map<String, Promosi> promosiMap = new HashMap<>();
-    static Map<String, Cetak> cetakMap = new HashMap<>();
-    static Map<String, Pesanan> orderMap = new HashMap<>();
-    static Map<String, Integer> pesanan =  new HashMap<>();
-    static ArrayList<String> inputHistory = new ArrayList<>();
-    static DecimalFormat dec = new DecimalFormat("#,###");
+    public static Map<String, Pelanggan> userMap = new HashMap<>();
+    public static Map<String, Promosi> promosiMap = new HashMap<>();
+    public static Map<String, Cetak> cetakMap = new HashMap<>();
+    public static Map<String, Pesanan> orderMap = new HashMap<>();
+    public static Map<String, Integer> pesanan =  new HashMap<>();
+    public static ArrayList<String> inputHistory = new ArrayList<>();
+    public static DecimalFormat dec = new DecimalFormat("#,###");
 
     public static void main(String[] args) {
         LocalDate now = LocalDate.now();

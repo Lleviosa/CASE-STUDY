@@ -1,3 +1,5 @@
+package Backend;
+
 public interface Applicable {
     public boolean isCustomerEligible(Member member);
     public boolean isMinimumPriceEligible(String order1);

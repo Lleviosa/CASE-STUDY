@@ -1,5 +1,6 @@
+package Backend;
 
-abstract class Cetak {
+public abstract class Cetak {
     // method abstraknya cuman hargaCetak
     // buat subclassnya yang bedain masih cuman harganya(harus ada method khusus
     // biar beda)
@@ -13,7 +14,6 @@ abstract class Cetak {
     Cetak(String nama, int hargaFinal) {
         this.hargaFinal = hargaFinal;
         this.nama = nama;
-        ;
     }
 
     public int getJumlahCetak() {

@@ -1,3 +1,5 @@
+package Backend;
+
 public class Fotokopi extends Cetak {
     private boolean doubleSided = false;
     private String IDMenu;
