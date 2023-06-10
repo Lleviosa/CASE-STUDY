@@ -106,6 +106,7 @@ public class AdminWindow extends javax.swing.JFrame {
         memberID = new javax.swing.JTextField();
         jScrollPane7 = new javax.swing.JScrollPane();
         memberTable = new javax.swing.JTable();
+        kembaliMember = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         saldoGuest = new javax.swing.JTextField();
@@ -131,6 +132,7 @@ public class AdminWindow extends javax.swing.JFrame {
         comboPromo = new javax.swing.JComboBox<>();
         jScrollPane10 = new javax.swing.JScrollPane();
         promoTable = new javax.swing.JTable();
+        kembaliPromo = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         menuID = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -228,6 +230,13 @@ public class AdminWindow extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(memberTable);
 
+        kembaliMember.setText("Kembali");
+        kembaliMember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliMemberActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -250,8 +259,13 @@ public class AdminWindow extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(namaMember, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(kembaliMember)
+                                        .addGap(6, 6, 6)))
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(simpanMember)
                                     .addComponent(saldoMember, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -279,7 +293,9 @@ public class AdminWindow extends javax.swing.JFrame {
                     .addComponent(saldoMember, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(18, 18, 18)
-                .addComponent(simpanMember)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(simpanMember)
+                    .addComponent(kembaliMember))
                 .addGap(80, 80, 80)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
@@ -409,6 +425,13 @@ public class AdminWindow extends javax.swing.JFrame {
         });
         jScrollPane10.setViewportView(promoTable);
 
+        kembaliPromo.setText("Kembali");
+        kembaliPromo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliPromoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -422,7 +445,8 @@ public class AdminWindow extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel15)
                             .addComponent(jLabel16)
-                            .addComponent(jLabel17))
+                            .addComponent(jLabel17)
+                            .addComponent(kembaliPromo, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(minBeli, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -473,7 +497,9 @@ public class AdminWindow extends javax.swing.JFrame {
                     .addComponent(minBeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17))
                 .addGap(18, 18, 18)
-                .addComponent(simpanPromo)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(simpanPromo)
+                    .addComponent(kembaliPromo))
                 .addGap(61, 61, 61)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
@@ -698,6 +724,20 @@ public class AdminWindow extends javax.swing.JFrame {
 
     }//GEN-LAST:event_comboMenuActionPerformed
 
+    private void kembaliPromoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliPromoActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        MainWindow main = new MainWindow();
+        main.setVisible(true);
+    }//GEN-LAST:event_kembaliPromoActionPerformed
+
+    private void kembaliMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliMemberActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        MainWindow main = new MainWindow();
+        main.setVisible(true);
+    }//GEN-LAST:event_kembaliMemberActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -767,6 +807,8 @@ public class AdminWindow extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JButton kembaliMember;
+    private javax.swing.JButton kembaliPromo;
     private javax.swing.JTextField maxPotong;
     private javax.swing.JTextField memberID;
     private javax.swing.JTable memberTable;

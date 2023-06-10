@@ -29,23 +29,13 @@ public class MemberWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        saldoMember = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         memberID = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         namaDepanMember = new javax.swing.JTextField();
-        tanggalDaftarMember = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        simpanMember = new javax.swing.JButton();
+        masukMember = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        saldoMember.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saldoMemberActionPerformed(evt);
-            }
-        });
 
         jLabel1.setText("Nama ");
 
@@ -63,20 +53,10 @@ public class MemberWindow extends javax.swing.JFrame {
             }
         });
 
-        tanggalDaftarMember.addActionListener(new java.awt.event.ActionListener() {
+        masukMember.setText("Masuk");
+        masukMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tanggalDaftarMemberActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Tanggal Daftar");
-
-        jLabel4.setText("Saldo");
-
-        simpanMember.setText("Simpan");
-        simpanMember.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                simpanMemberActionPerformed(evt);
+                masukMemberActionPerformed(evt);
             }
         });
 
@@ -85,32 +65,27 @@ public class MemberWindow extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tanggalDaftarMember, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(130, 130, 130)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(memberID, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(namaDepanMember, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(memberID, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(namaDepanMember, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(simpanMember)
-                            .addComponent(saldoMember, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(250, Short.MAX_VALUE))
+                        .addGap(209, 209, 209)
+                        .addComponent(masukMember)))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(memberID, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -118,20 +93,9 @@ public class MemberWindow extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(namaDepanMember, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(tanggalDaftarMember, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(46, 46, 46))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(saldoMember, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(simpanMember)
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(masukMember)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         pack();
@@ -142,27 +106,16 @@ public class MemberWindow extends javax.swing.JFrame {
         
     }//GEN-LAST:event_memberIDActionPerformed
 
-    private void saldoMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saldoMemberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_saldoMemberActionPerformed
-
     private void namaDepanMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaDepanMemberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_namaDepanMemberActionPerformed
 
-    private void tanggalDaftarMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanggalDaftarMemberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tanggalDaftarMemberActionPerformed
-
-    private void simpanMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanMemberActionPerformed
+    private void masukMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masukMemberActionPerformed
         // TODO add your handling code here:
         String ID = memberID.getText();
-        String namaDepan = namaDepanMember.getText();
-        String tanggalDaftar = tanggalDaftarMember.getText();
-        int saldoMember = Integer.parseInt(this.saldoMember.getText());
-        Member member = new Member(ID, namaDepan, tanggalDaftar, saldoMember);
-        Main.userMap.put(ID, member);
-    }//GEN-LAST:event_simpanMemberActionPerformed
+        String nama = namaDepanMember.getText();
+        Main.userMap.get(ID);
+    }//GEN-LAST:event_masukMemberActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,12 +156,8 @@ public class MemberWindow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton masukMember;
     private javax.swing.JTextField memberID;
     private javax.swing.JTextField namaDepanMember;
-    private javax.swing.JTextField saldoMember;
-    private javax.swing.JButton simpanMember;
-    private javax.swing.JTextField tanggalDaftarMember;
     // End of variables declaration//GEN-END:variables
 }

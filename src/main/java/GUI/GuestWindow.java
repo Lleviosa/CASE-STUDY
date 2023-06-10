@@ -29,87 +29,21 @@ public class GuestWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        saldoGuest = new javax.swing.JTextField();
-        guestID1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        simpanGuest = new javax.swing.JButton();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        saldoGuest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saldoGuestActionPerformed(evt);
-            }
-        });
-
-        guestID1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                guestID1ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Saldo");
-
-        jLabel2.setText("ID");
-
-        simpanGuest.setText("Simpan");
-        simpanGuest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                simpanGuestActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(60, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(simpanGuest)
-                    .addComponent(saldoGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guestID1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(312, 312, 312))
+            .addGap(0, 591, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guestID1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(saldoGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(simpanGuest)
-                .addContainerGap(293, Short.MAX_VALUE))
+            .addGap(0, 518, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void saldoGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saldoGuestActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_saldoGuestActionPerformed
-
-    private void guestID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guestID1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_guestID1ActionPerformed
-
-    private void simpanGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanGuestActionPerformed
-        // TODO add your handling code here:
-        String ID = guestID1.getText();
-        int saldo = Integer.parseInt(saldoGuest.getText());
-        Guest guest = new Guest(ID, 0);
-        Main.userMap.put(ID, guest);
-    }//GEN-LAST:event_simpanGuestActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,10 +81,5 @@ public class GuestWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField guestID1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField saldoGuest;
-    private javax.swing.JButton simpanGuest;
     // End of variables declaration//GEN-END:variables
 }
