@@ -91,7 +91,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(toMember, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(toAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(toGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(toGuest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(65, Short.MAX_VALUE)
@@ -103,13 +103,13 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addComponent(toAdmin)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(toMember)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(toGuest)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -132,7 +132,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void toMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toMemberActionPerformed
         // TODO add your handling code here:
         dispose();
-        MemberWindow member = new MemberWindow();
+        MemberLoginWindow member = new MemberLoginWindow();
         member.setVisible(true);
     }//GEN-LAST:event_toMemberActionPerformed
 

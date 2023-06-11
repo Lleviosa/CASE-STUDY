@@ -1,20 +1,17 @@
-package GUI;
-
-import Backend.*;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package GUI;
 
 /**
  *
  * @author Satriock
  */
 public class MemberWindow extends javax.swing.JFrame {
-    
+
     /**
-     * Creates new form MemberWIndow
+     * Creates new form MemberWindow
      */
     public MemberWindow() {
         initComponents();
@@ -29,93 +26,21 @@ public class MemberWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        memberID = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        namaDepanMember = new javax.swing.JTextField();
-        masukMember = new javax.swing.JButton();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setText("Nama ");
-
-        memberID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                memberIDActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("ID");
-
-        namaDepanMember.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                namaDepanMemberActionPerformed(evt);
-            }
-        });
-
-        masukMember.setText("Masuk");
-        masukMember.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                masukMemberActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(memberID, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(namaDepanMember, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(209, 209, 209)
-                        .addComponent(masukMember)))
-                .addContainerGap(190, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(memberID, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(namaDepanMember, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addComponent(masukMember)
-                .addContainerGap(79, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void memberIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberIDActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_memberIDActionPerformed
-
-    private void namaDepanMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaDepanMemberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_namaDepanMemberActionPerformed
-
-    private void masukMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masukMemberActionPerformed
-        // TODO add your handling code here:
-        String ID = memberID.getText();
-        String nama = namaDepanMember.getText();
-        Main.userMap.get(ID);
-    }//GEN-LAST:event_masukMemberActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,7 +68,6 @@ public class MemberWindow extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MemberWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -154,10 +78,5 @@ public class MemberWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton masukMember;
-    private javax.swing.JTextField memberID;
-    private javax.swing.JTextField namaDepanMember;
     // End of variables declaration//GEN-END:variables
 }
