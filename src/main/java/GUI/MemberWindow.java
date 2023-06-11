@@ -4,6 +4,13 @@
  */
 package GUI;
 
+import Backend.Cetak;
+import Backend.Main;
+import static Backend.Main.cetakMap;
+import java.util.Map;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Satriock
@@ -16,6 +23,26 @@ public class MemberWindow extends javax.swing.JFrame {
     public MemberWindow() {
         initComponents();
     }
+    
+    public void loadMenuMember(){
+        DefaultTableModel tableMenuMember = (DefaultTableModel) menuMember.getModel();
+        
+//        for(Map.Entry<String, Cetak> entry : Main.cetakMap){
+//            
+//        }
+
+    }
+    
+    public void loadMenu() {
+        DefaultTableModel tableMenu = (DefaultTableModel) menuMember.getModel();
+
+        for (Map.Entry<String, Cetak> entry : cetakMap.entrySet()) {
+            String IDMenu = entry.getKey();
+            Cetak menu = entry.getValue();
+            Object[] rowData = {IDMenu, menu.getNama(), menu.getHargaFinal()};
+            tableMenu.addRow(rowData);
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,21 +53,110 @@ public class MemberWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        menuMember = new javax.swing.JTable();
+        tambahCart = new javax.swing.JButton();
+        removeCart = new javax.swing.JButton();
+        toCheckout = new javax.swing.JButton();
+        qtyMember = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        menuMember.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID Menu", "Nama Menu", "Harga"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(menuMember);
+
+        tambahCart.setText("TAMBAH");
+        tambahCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tambahCartActionPerformed(evt);
+            }
+        });
+
+        removeCart.setText("HAPUS");
+
+        toCheckout.setText("NEXT");
+        toCheckout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toCheckoutActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Jumlah");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(qtyMember, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removeCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tambahCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(toCheckout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(qtyMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addComponent(tambahCart)
+                        .addGap(18, 18, 18)
+                        .addComponent(removeCart)
+                        .addGap(79, 79, 79)
+                        .addComponent(toCheckout))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tambahCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahCartActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_tambahCartActionPerformed
+
+    private void toCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toCheckoutActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        MemberCheckoutWindow mCheckout = new MemberCheckoutWindow();
+        mCheckout.setVisible(true);
+    }//GEN-LAST:event_toCheckoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +194,12 @@ public class MemberWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable menuMember;
+    private javax.swing.JTextField qtyMember;
+    private javax.swing.JButton removeCart;
+    private javax.swing.JButton tambahCart;
+    private javax.swing.JButton toCheckout;
     // End of variables declaration//GEN-END:variables
 }

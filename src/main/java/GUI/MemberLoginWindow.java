@@ -113,7 +113,10 @@ public class MemberLoginWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
         String ID = memberID.getText();
         String nama = namaDepanMember.getText();
-        Main.userMap.get(ID);
+//        Main.userMap.get(ID);
+        dispose();
+        MemberWindow memberW = new MemberWindow();
+        memberW.setVisible(true);
     }//GEN-LAST:event_masukMemberActionPerformed
 
     /**
