@@ -30,7 +30,7 @@
               <Component id="jLabel1" min="-2" pref="43" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="qtyMember" alignment="0" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="qtyGuest" alignment="0" min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="tambahCart" alignment="0" max="32767" attributes="0"/>
                   <Component id="removeCart" alignment="0" max="32767" attributes="0"/>
                   <Component id="toCheckout" alignment="0" max="32767" attributes="0"/>
@@ -48,7 +48,7 @@
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="qtyMember" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="qtyGuest" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="tambahCart" min="-2" max="-2" attributes="0"/>
@@ -86,7 +86,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toCheckoutActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="qtyMember">
+    <Component class="javax.swing.JTextField" name="qtyGuest">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

@@ -148,7 +148,7 @@ public class MemberWindow extends javax.swing.JFrame {
 
     private void tambahCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahCartActionPerformed
         // TODO add your handling code here:
-        
+        int qty = Integer.parseInt(qtyMember.getText());
     }//GEN-LAST:event_tambahCartActionPerformed
 
     private void toCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toCheckoutActionPerformed

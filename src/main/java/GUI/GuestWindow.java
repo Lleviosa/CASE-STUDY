@@ -32,7 +32,7 @@ public class GuestWindow extends javax.swing.JFrame {
         tambahCart = new javax.swing.JButton();
         removeCart = new javax.swing.JButton();
         toCheckout = new javax.swing.JButton();
-        qtyMember = new javax.swing.JTextField();
+        qtyGuest = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         menuMember = new javax.swing.JTable();
@@ -93,7 +93,7 @@ public class GuestWindow extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(qtyMember, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(qtyGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tambahCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(removeCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(toCheckout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -108,7 +108,7 @@ public class GuestWindow extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(qtyMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(qtyGuest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addComponent(tambahCart)
                         .addGap(18, 18, 18)
@@ -124,7 +124,7 @@ public class GuestWindow extends javax.swing.JFrame {
 
     private void tambahCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahCartActionPerformed
         // TODO add your handling code here:
-
+        int qty = Integer.parseInt(qtyGuest.getText());
     }//GEN-LAST:event_tambahCartActionPerformed
 
     private void toCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toCheckoutActionPerformed
@@ -173,7 +173,7 @@ public class GuestWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable menuMember;
-    private javax.swing.JTextField qtyMember;
+    private javax.swing.JTextField qtyGuest;
     private javax.swing.JButton removeCart;
     private javax.swing.JButton tambahCart;
     private javax.swing.JButton toCheckout;
