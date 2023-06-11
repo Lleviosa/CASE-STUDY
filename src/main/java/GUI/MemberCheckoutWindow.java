@@ -70,6 +70,11 @@ public class MemberCheckoutWindow extends javax.swing.JFrame {
         });
 
         applyPromoMember.setText("APPLY");
+        applyPromoMember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                applyPromoMemberActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Masukkan Kode Promo");
 
@@ -143,6 +148,11 @@ public class MemberCheckoutWindow extends javax.swing.JFrame {
     private void memberCheckoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberCheckoutButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_memberCheckoutButtonActionPerformed
+
+    private void applyPromoMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_applyPromoMemberActionPerformed
+        // TODO add your handling code here:
+        String applyPromo = inputPromo.getText();
+    }//GEN-LAST:event_applyPromoMemberActionPerformed
 
     /**
      * @param args the command line arguments
